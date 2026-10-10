@@ -1,0 +1,9 @@
+# Ignore everything...
+*
+# ...but still look inside folders
+!*/
+# Track Java source files
+!*.java
+# Keep the build file and this file
+!/pom.xml
+!/.gitignore
