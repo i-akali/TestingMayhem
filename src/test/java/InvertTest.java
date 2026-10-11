@@ -20,6 +20,7 @@ class InvertTest {
         map.put("Bananas", 8);
         Map<Integer, Set<String>> map2 = MapUtils.invert(map);
 
+        assertNotNull(map2);
         assertEquals(Set.of("Apple"), map2.get(10));
         assertEquals(Set.of("Oranges"), map2.get(9));
         assertEquals(Set.of("Bananas"), map2.get(8));
@@ -34,6 +35,7 @@ class InvertTest {
         map.put("Oranges", 9);
         map.put("Bananas", 9);
         Map<Integer, Set<String>> map2 = MapUtils.invert(map);
+        assertNotNull(map2);
         assertEquals(Set.of("Oranges", "Bananas"), map2.get(9));
         assertEquals(Set.of("Apple"), map2.get(10));
     }
@@ -43,6 +45,7 @@ class InvertTest {
     void nullMap(){
         Map<String, Integer> map = null;
         Map<Integer, Set<String>> map2 = MapUtils.invert(map);
+        assertNotNull(map2);
         assertTrue(map2.isEmpty());
     }
 
@@ -51,6 +54,7 @@ class InvertTest {
     void emptyMap(){
         Map<String, Integer> map = new HashMap<>();
         Map<Integer, Set<String>> map2 = MapUtils.invert(map);
+        assertNotNull(map2);
         assertTrue(map2.isEmpty());
     }
 
@@ -63,10 +67,8 @@ class InvertTest {
         map.put("Bananas", 9);
         Map<Integer, Set<String>> map2 = MapUtils.invert(map);
 
+        assertNotNull(map2);
         assertEquals(Set.of(9), map2.keySet());
         assertEquals(Set.of("Oranges", "Bananas"), map2.get(9));
-        assertEquals(1, map2.size());
     }
-
-
 }
