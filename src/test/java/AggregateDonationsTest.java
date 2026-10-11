@@ -7,7 +7,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DonationUtilsTest {
+class AggregateDonationsTest {
 
     @DisplayName("Each Donation has a distinct user")
     @Test
